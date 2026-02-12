@@ -1,4 +1,4 @@
-FROM 9.3.1-jdk21-alpine AS build
+FROM gradle:9.3.1-jdk21-alpine AS build
 
 WORKDIR /app/backend
 
