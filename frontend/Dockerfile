@@ -2,12 +2,12 @@ FROM node:24
 
 WORKDIR /app/frontend
 
-COPY package.json package-lock.json ./
+COPY package*.json ./
 
 RUN npm install
 
 COPY . .
 
-EXPOSE 5173
+EXPOSE 3000 3001
 
 CMD ["npm", "run", "dev"]

@@ -6,11 +6,11 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    port: 5173,
-    strictPort: true,
+    port: 3000,
+    strictPort:true,
     hmr: {
-      host: 'localhost',
-      port: 5173,
+      host: "host.docker.internal",
+      port: 3001,
     },
   },
 })
