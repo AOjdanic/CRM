@@ -2,14 +2,14 @@ FROM gradle:9.3.1-jdk21-alpine AS build
 
 WORKDIR /app
 
-COPY build.gradle settings.gradle gradlew ./
+COPY build.gradle settings.gradle ./
 COPY gradle ./gradle
 
-RUN ./gradlew dependecies --no-daemon || true
+RUN gradle dependencies --no-daemon || true
 
 COPY src ./src
 
-RUN ./gradlew bootJar --no-daemon
+RUN gradle bootJar --no-daemon
 
 FROM eclipse-temurin:21-jre
 
