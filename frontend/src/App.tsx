@@ -1,83 +1,53 @@
-import {useState} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, type ChangeEvent } from 'react';
 
-function App() {
-    const [count, setCount] = useState(0)
+export function App() {
+  const [name, setName] = useState('');
+  const [content, setContent] = useState('');
 
-    const [name, setName] = useState('');
-    const [content, setContent] = useState('');
+  function setTodoName(e: ChangeEvent<HTMLInputElement>) {
+    setName(e.target.value);
+  }
 
+  function setTodoContent(e: ChangeEvent<HTMLInputElement>) {
+    setContent(e.target.value);
+  }
 
-    function setTodoName(e) {
-        setName(e.target.value)
-    }
+  function createTodo() {
+    fetch('http://localhost:8080/api/todos/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        content,
+      }),
+    });
+  }
 
-    function setTodoContent(e) {
-        setContent(e.target.value)
-    }
+  async function getAllTodos() {
+    const res = await fetch('http://localhost:8080/api/todos/');
 
+    const data = await res.json();
 
-    function createTodo() {
-        fetch('http://localhost:8080/api/todos/create', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name,
-                content
-            })
-        })
-    }
+    console.log(data);
+  }
 
+  return (
+    <div className="card">
+      <label>
+        Name
+        <input value={name} onChange={setTodoName} />
+      </label>
 
-    async function getAllTodos() {
-        const res = await fetch('http://localhost:8080/api/todos/');
+      <label>
+        Content
+        <input value={content} onChange={setTodoContent} />
+      </label>
 
-        const data = await res.json();
+      <button onClick={createTodo}>create to do</button>
 
-        console.log(data)
-    }
-
-    return (
-        <>
-            <div>
-                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo"/>
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo"/>
-                </a>
-            </div>
-            <h1>Vite + React fskdlfjlksdj</h1>
-            <div className="card">
-                <label>
-                    Name
-                    <input value={name} onChange={setTodoName}/>
-                </label>
-
-                <label>
-                    Content
-                    <input value={content} onChange={setTodoContent}/>
-                </label>
-
-
-                <button onClick={createTodo}>
-                    create to do
-                </button>
-
-
-                <button onClick={getAllTodos}>
-                    get all todos
-                </button>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
-        </>
-    )
+      <button onClick={getAllTodos}>get all todos</button>
+    </div>
+  );
 }
-
-export default App
