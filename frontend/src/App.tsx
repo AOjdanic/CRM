@@ -34,7 +34,7 @@ export function App() {
   }
 
   return (
-    <div className="card">
+    <div>
       <label>
         Name
         <input value={name} onChange={setTodoName} />
