@@ -1,4 +1,5 @@
 import { useState, type ChangeEvent } from 'react';
+import APIService from './api';
 
 export function App() {
   const [name, setName] = useState('');
@@ -13,24 +14,13 @@ export function App() {
   }
 
   function createTodo() {
-    fetch('http://localhost:8080/api/todos/create', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name,
-        content,
-      }),
-    });
+    APIService.post('/api/todos/create', { name, content });
   }
 
   async function getAllTodos() {
-    const res = await fetch('http://localhost:8080/api/todos/');
+    const res = await APIService.get('/api/todos/');
 
-    const data = await res.json();
-
-    console.log(data);
+    console.log(res.data);
   }
 
   return (
