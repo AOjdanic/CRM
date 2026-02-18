@@ -11,3 +11,82 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+@theme {
+  --color-neutral-10: #fcfcfe;
+  --color-neutral-20: #f7f9fb;
+  --color-neutral-30: #f0f2f7;
+  --color-neutral-40: #e8ecf3;
+  --color-neutral-50: #e1e5ef;
+  --color-neutral-60: #d9dfeb;
+  --color-neutral-70: #a3a7b0;
+  --color-neutral-80: #6d7076;
+  --color-neutral-90: #36383b;
+  --color-neutral-100: #000000;
+
+  --color-red-10: #f7eded;
+  --color-red-20: #efdbdb;
+  --color-red-30: #dfb7b7;
+  --color-red-40: #cf9393;
+  --color-red-50: #bf6f6f;
+  --color-red-60: #a65656;
+  --color-red-70: #8c3c3c;
+  --color-red-80: #692d2d;
+  --color-red-90: #461e1e;
+  --color-red-100: #230f0f;
+
+  --color-orange-10: #fbf4ec;
+  --color-orange-20: #f6e8d8;
+  --color-orange-30: #edd2b1;
+  --color-orange-40: #e4bb8b;
+  --color-orange-50: #dba564;
+  --color-orange-60: #d28e3d;
+  --color-orange-70: #a87231;
+  --color-orange-80: #7e5525;
+  --color-orange-90: #543918;
+  --color-orange-100: #2a1c0c;
+
+  --color-lime-10: #f7f7e8;
+  --color-lime-20: #efeed2;
+  --color-lime-30: #e0dda5;
+  --color-lime-40: #d0cd77;
+  --color-lime-50: #c1bc4a;
+  --color-lime-60: #b1ab1d;
+  --color-lime-70: #8e8917;
+  --color-lime-80: #6a6711;
+  --color-lime-90: #47440c;
+  --color-lime-100: #232206;
+
+  --color-purple-10: #f4edf7;
+  --color-purple-20: #eadbef;
+  --color-purple-30: #d5b7df;
+  --color-purple-40: #bf93cf;
+  --color-purple-50: #aa6fbf;
+  --color-purple-60: #954baf;
+  --color-purple-70: #773c8c;
+  --color-purple-80: #592d69;
+  --color-purple-90: #3c1e46;
+  --color-purple-100: #1e0f23;
+
+  --color-green-10: #eef5f0;
+  --color-green-20: #deece1;
+  --color-green-30: #bcd8c2;
+  --color-green-40: #9bc5a4;
+  --color-green-50: #79b185;
+  --color-green-60: #589e67;
+  --color-green-70: #467e52;
+  --color-green-80: #335f3f;
+  --color-green-90: #233f29;
+  --color-green-100: #122015;
+
+  --color-navy-10: #eeeff5;
+  --color-navy-20: #dedfec;
+  --color-navy-30: #bcbfd8;
+  --color-navy-40: #9b9fc5;
+  --color-navy-50: #797fb1;
+  --color-navy-60: #585f9e;
+  --color-navy-70: #464c7e;
+  --color-navy-80: #35395f;
+  --color-navy-90: #23263f;
+  --color-navy-100: #121320;
+}
