@@ -24,7 +24,7 @@ export function App() {
   }
 
   return (
-    <div>
+    <div className="flex justify-center w-full bg-amber-600">
       <label>
         Name
         <input value={name} onChange={setTodoName} />
