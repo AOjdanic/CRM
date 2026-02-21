@@ -1,5 +1,6 @@
 import { useState, type ChangeEvent } from 'react';
 import APIService from './api';
+import { Button } from './components/Button/Button';
 
 export function App() {
   const [name, setName] = useState('');
@@ -24,20 +25,26 @@ export function App() {
   }
 
   return (
-    <div className="flex justify-center w-full">
-      <label>
-        Name
-        <input value={name} onChange={setTodoName} />
-      </label>
+    <div className="flex justify-center w-3xl flex-col gap-10 mx-auto">
+      <div className="flex gap-4">
+        <label>
+          Name
+          <input value={name} onChange={setTodoName} />
+        </label>
 
-      <label>
-        Content
-        <input value={content} onChange={setTodoContent} />
-      </label>
+        <label>
+          Content
+          <input value={content} onChange={setTodoContent} />
+        </label>
 
-      <button onClick={createTodo}>create to do</button>
+        <Button onClick={createTodo} variant="primary" size="medium">
+          Create To Do
+        </Button>
+      </div>
 
-      <button onClick={getAllTodos}>get all todos</button>
+      <Button onClick={getAllTodos} variant="primary" size="large">
+        Get All Todos
+      </Button>
     </div>
   );
 }
