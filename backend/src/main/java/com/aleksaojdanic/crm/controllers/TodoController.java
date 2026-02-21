@@ -15,12 +15,12 @@ public class TodoController {
     @Autowired
     private TodoService todoService;
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Todo> getTodos() {
         return todoService.getTodos();
     }
 
-    @PostMapping("/create")
+    @PostMapping()
     public void createTodo(@RequestBody TodoDto todo) {
         todoService.createTodo(todo.getName(), todo.getContent());
     }
