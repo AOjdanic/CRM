@@ -14,17 +14,17 @@ export function App() {
   }
 
   function createTodo() {
-    APIService.post('/api/todos/create', { name, content });
+    APIService.post('/todos', { name, content });
   }
 
   async function getAllTodos() {
-    const res = await APIService.get('/api/todos/');
+    const res = await APIService.get('/todos');
 
     console.log(res.data);
   }
 
   return (
-    <div className="flex justify-center w-full bg-amber-600">
+    <div className="flex justify-center w-full">
       <label>
         Name
         <input value={name} onChange={setTodoName} />
