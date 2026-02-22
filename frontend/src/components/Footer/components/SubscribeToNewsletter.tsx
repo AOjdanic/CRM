@@ -1,4 +1,5 @@
 import { Button } from '../../Button/Button';
+import { Input } from '../../Input/Input';
 
 export function SubscribeToNewsletter() {
   return (
@@ -7,11 +8,7 @@ export function SubscribeToNewsletter() {
         Subscribe to Our Newsletter to Get Free Demo for First One Month
       </span>
 
-      <div className="flex py-2.5 px-3 items-center gap-3 self-stretch rounded-sm border border-solid border-interaction-outline-base bg-interaction-secondary-base">
-        <span className="text-dark-tertiary text-sm font-normal">
-          Enter your email
-        </span>
-      </div>
+      <Input id="subscribe-input" placeholder="Enter your email" />
 
       <Button className="w-full" variant="primary" size="large">
         Subscribe
