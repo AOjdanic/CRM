@@ -27,6 +27,7 @@ type Props = PropsWithChildren<
 >;
 
 export function Button({
+  className = '',
   children,
   iconOnly,
   size = 'small',
@@ -58,7 +59,7 @@ export function Button({
 
   return (
     <button
-      className={`inline-flex py-3 px-4.5 justify-center items-center gap-2 rounded-sm hover:cursor-pointer disabled:cursor-not-allowed ${buttonStyles[variant]}`}
+      className={`inline-flex py-3 px-4.5 justify-center items-center gap-2 rounded-sm hover:cursor-pointer disabled:cursor-not-allowed ${buttonStyles[variant]} ${className}`}
       {...props}
     >
       {leftIcon ? leftIcon : null}
