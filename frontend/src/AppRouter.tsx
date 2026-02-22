@@ -10,6 +10,8 @@ import { Pricing } from './pages/public/Pricing/Pricing';
 import { PublicLayout } from './pages/public/PublicLayout';
 import { Features } from './pages/public/Features/Features';
 import { Homepage } from './pages/public/Homepage/Homepage';
+import { NewPassword } from './pages/public/NewPassword/NewPassword';
+import { ResetPassword } from './pages/public/ResetPassword/ResetPassword';
 
 const router = createBrowserRouter([
   {
@@ -17,10 +19,12 @@ const router = createBrowserRouter([
     Component: PublicLayout,
     children: [
       { index: true, Component: Homepage },
+      { path: uiRoutes.public.blog, Component: Blog },
       { path: uiRoutes.public.about, Component: About },
       { path: uiRoutes.public.pricing, Component: Pricing },
       { path: uiRoutes.public.features, Component: Features },
-      { path: uiRoutes.public.blog, Component: Blog },
+      { path: uiRoutes.public.newPassword, Component: NewPassword },
+      { path: uiRoutes.public.resetPassword, Component: ResetPassword },
     ],
   },
   { path: uiRoutes.public.login, Component: LogIn },

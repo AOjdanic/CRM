@@ -7,6 +7,8 @@ export const uiRoutes = {
     blog: '/blog',
     login: '/login',
     signup: '/signup',
+    newPassword: '/new-password',
+    resetPassword: '/reset-password',
   },
   auth: {},
 } as const;
