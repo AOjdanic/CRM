@@ -15,7 +15,9 @@ export function PublicLayout() {
   return (
     <>
       <PublicHeader />
-      <Outlet />
+      <div className="flex flex-col w-full flex-1">
+        <Outlet />
+      </div>
       {isOnPasswordsPage ? null : <Footer />}
     </>
   );
