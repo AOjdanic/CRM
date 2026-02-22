@@ -1,3 +1,4 @@
+import { uiRoutes } from '../../../../uiRoutes';
 import { NavigationCategory } from './components/NavigationCategory';
 import { NavigationItem } from './components/NavigationItem';
 
@@ -8,10 +9,12 @@ export function FooterNavigation() {
         <NavigationCategory>Pages</NavigationCategory>
 
         <div className="flex flex-col items-start gap-4">
-          <NavigationItem>About Us</NavigationItem>
-          <NavigationItem>Features</NavigationItem>
-          <NavigationItem>Product</NavigationItem>
-          <NavigationItem>Pricing</NavigationItem>
+          <NavigationItem to={uiRoutes.public.about}>About Us</NavigationItem>
+          <NavigationItem to={uiRoutes.public.features}>
+            Features
+          </NavigationItem>
+          <NavigationItem to={'/product'}>Product</NavigationItem>
+          <NavigationItem to={uiRoutes.public.pricing}>Pricing</NavigationItem>
         </div>
       </div>
 
@@ -19,9 +22,11 @@ export function FooterNavigation() {
         <NavigationCategory>Company</NavigationCategory>
 
         <div className="flex flex-col items-start gap-4">
-          <NavigationItem>Careers</NavigationItem>
-          <NavigationItem>Guide</NavigationItem>
-          <NavigationItem>Startup Program</NavigationItem>
+          <NavigationItem to="/careers">Careers</NavigationItem>
+          <NavigationItem to="/guide">Guide</NavigationItem>
+          <NavigationItem to="/startup-programs">
+            Startup Program
+          </NavigationItem>
         </div>
       </div>
 
@@ -29,10 +34,14 @@ export function FooterNavigation() {
         <NavigationCategory>Support</NavigationCategory>
 
         <div className="flex flex-col items-start gap-4">
-          <NavigationItem>Help Center</NavigationItem>
-          <NavigationItem>Customer Support</NavigationItem>
-          <NavigationItem>API Documentation</NavigationItem>
-          <NavigationItem>System Status</NavigationItem>
+          <NavigationItem to="/help-center">Help Center</NavigationItem>
+          <NavigationItem to="/customer-support">
+            Customer Support
+          </NavigationItem>
+          <NavigationItem to="/api-documentation">
+            API Documentation
+          </NavigationItem>
+          <NavigationItem to="/system-status">System Status</NavigationItem>
         </div>
       </div>
 
@@ -40,10 +49,12 @@ export function FooterNavigation() {
         <NavigationCategory>Resources</NavigationCategory>
 
         <div className="flex flex-col items-start gap-4">
-          <NavigationItem>FAQ</NavigationItem>
-          <NavigationItem>Blog</NavigationItem>
-          <NavigationItem>Privacy Policy</NavigationItem>
-          <NavigationItem>Terms of Service</NavigationItem>
+          <NavigationItem to="/faq">FAQ</NavigationItem>
+          <NavigationItem to={uiRoutes.public.blog}>Blog</NavigationItem>
+          <NavigationItem to={'/privacy-policy'}>Privacy Policy</NavigationItem>
+          <NavigationItem to="/terms-of-service">
+            Terms of Service
+          </NavigationItem>
         </div>
       </div>
     </nav>

@@ -1,7 +1,12 @@
 import type { PropsWithChildren } from 'react';
+import { Link } from 'react-router';
 
-export function NavigationItem({ children }: PropsWithChildren) {
+type Props = PropsWithChildren<{ to: string }>;
+
+export function NavigationItem({ to = '', children }: Props) {
   return (
-    <span className="text-dark-tertiary text-base font-normal">{children}</span>
+    <Link to={to} className="text-dark-tertiary text-base font-normal">
+      {children}
+    </Link>
   );
 }
