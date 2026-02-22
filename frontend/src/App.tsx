@@ -1,5 +1,5 @@
-import { PublicHeader } from './components/PublicHeader/PublicHeader';
+import { AppRouter } from './AppRouter';
 
 export function App() {
-  return <PublicHeader />;
+  return <AppRouter />;
 }
