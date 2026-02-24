@@ -1,9 +1,12 @@
+import { useState } from 'react';
+
 import { Input } from '../../../components/Input/Input';
 import { Button } from '../../../components/Button/Button';
 
 import { Logo } from '../../../components/PublicHeader/components/Logo/Logo';
 
 import Eye from './assets/eye.svg';
+import ClosedEye from './assets/closedEye.svg';
 import loginImage from './assets/loginImage.png';
 import GoogleLogo from './assets/googleLogo.svg';
 
@@ -14,6 +17,8 @@ import { AllRightsReserved } from './components/AllRightsReserved';
 import { AlreadyHaveAnAccount } from './components/AlreadyHaveAnAccount';
 
 export function LogIn() {
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+
   return (
     <main className="flex flex-col h-screen flex-1 w-full">
       <div className="flex items-start h-full bg-light-secondary w-full">
@@ -33,9 +38,22 @@ export function LogIn() {
                 />
 
                 <Input
+                  type={showPassword ? 'text' : 'password'}
                   label="Password"
                   placeholder="Enter your password here"
-                  suffixContent={<Eye />}
+                  suffixContent={
+                    showPassword ? (
+                      <ClosedEye
+                        className="h-5 w-5 cursor-pointer"
+                        onClick={() => setShowPassword(false)}
+                      />
+                    ) : (
+                      <Eye
+                        className="h-5 w-5 cursor-pointer"
+                        onClick={() => setShowPassword(true)}
+                      />
+                    )
+                  }
                 />
 
                 <div className="flex justify-between items-center self-stretch">
