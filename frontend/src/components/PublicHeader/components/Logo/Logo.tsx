@@ -2,13 +2,21 @@ import { useNavigate } from 'react-router';
 import { LogoImage } from './LogoImage';
 import { uiRoutes } from '../../../../uiRoutes';
 
-export function Logo() {
+type Props = {
+  disableNavigation?: boolean;
+};
+
+export function Logo({ disableNavigation = false }: Props) {
   const navigate = useNavigate();
 
   return (
     <div
       className="flex items-center gap-3 hover:cursor-pointer"
-      onClick={() => navigate(uiRoutes.public.index)}
+      onClick={() => {
+        if (!disableNavigation) {
+          navigate(uiRoutes.public.index);
+        }
+      }}
     >
       <LogoImage />
 
