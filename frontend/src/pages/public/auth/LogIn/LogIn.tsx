@@ -1,19 +1,19 @@
 import { useState } from 'react';
 
-import { Input } from '../../../components/Input/Input';
-import { Button } from '../../../components/Button/Button';
+import { Input } from '../../../../components/Input/Input';
+import { Button } from '../../../../components/Button/Button';
 
-import { Logo } from '../../../components/PublicHeader/components/Logo/Logo';
+import { Logo } from '../../../../components/PublicHeader/components/Logo/Logo';
 
-import Eye from './assets/eye.svg';
-import ClosedEye from './assets/closedEye.svg';
-import loginImage from './assets/loginImage.png';
-import GoogleLogo from './assets/googleLogo.svg';
+import Eye from '../assets/eye.svg';
+import ClosedEye from '../assets/closedEye.svg';
+import loginImage from '../assets/loginImage.png';
+import GoogleLogo from '../assets/googleLogo.svg';
 
 import { RememberMe } from './components/RememberMe';
-import { TitleSection } from './components/TitleSection';
+import { TitleSection } from '../components/TitleSection';
 import { ForgotPassword } from './components/ForgotPassword';
-import { AllRightsReserved } from './components/AllRightsReserved';
+import { AllRightsReserved } from '../components/AllRightsReserved';
 import { AlreadyHaveAnAccount } from './components/AlreadyHaveAnAccount';
 
 export function LogIn() {
@@ -28,7 +28,10 @@ export function LogIn() {
           <div className="flex flex-col items-center justify-center gap-9 self-stretch">
             <Logo disableNavigation />
 
-            <TitleSection />
+            <TitleSection
+              title="Welcome Back!"
+              subtitle="Please Log In to Continue"
+            />
 
             <div className="flex flex-col items-start gap-6 w-full">
               <div className="flex flex-col gap-4 items-start w-full">

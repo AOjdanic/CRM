@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Checkbox as CheckboxRadix } from 'radix-ui';
 
-import { Checkbox } from '../../../../components/Checkbox/Checkbox';
+import { Checkbox } from '../../../../../components/Checkbox/Checkbox';
 
 export function RememberMe() {
   const [checked, setChecked] = useState<CheckboxRadix.CheckedState>(false);

@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 
-import { uiRoutes } from '../../../../uiRoutes';
+import { uiRoutes } from '../../../../../uiRoutes';
 
 export function ForgotPassword() {
   return (
