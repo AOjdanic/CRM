@@ -14,8 +14,8 @@ export function ResetPassword() {
       <div className="flex px-35 flex-col justify-center items-center gap-35 self-stretch">
         <div className="flex flex-col justify-center items-center gap-10 self-stretch">
           <TitleSection
-            title="Set New Password"
-            subtitle="Your new password must be different than the previous passwords"
+            title="Reset Password"
+            subtitle="Enter your registered login email address to receive a secured link to set a new password"
           />
 
           <div className="flex flex-col items-start gap-6 w-110">
