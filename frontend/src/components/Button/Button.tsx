@@ -45,7 +45,7 @@ export function Button({
 
   const buttonStyles: Record<ButtonVariant, string> = {
     primary:
-      'bg-action-primary-base hover:bg-action-primary-hover active:bg-action-primary-active disabled:bg-action-primary-disabled text-light-primary disabled:text-light-disabled',
+      'bg-action-primary-base hover:bg-action-primary-hover active:bg-action-primary-active disabled:bg-action-primary-disabled text-light-primary disabled:text-light-disabled border border-solid border-dark-primary',
     secondary:
       'bg-action-secondary-base2 hover:bg-action-secondary-hover active:bg-action-secondary-active disabled:bg-action-secondary-disabled text-dark-primary disabled:text-dark-disabled',
     outline:

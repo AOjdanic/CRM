@@ -9,7 +9,7 @@ import { SignUp } from './pages/public/auth/SignUp/SignUp';
 import { Pricing } from './pages/public/Pricing/Pricing';
 import { PublicLayout } from './pages/public/PublicLayout';
 import { Features } from './pages/public/Features/Features';
-import { Homepage } from './pages/public/Homepage/Homepage';
+import { Homepage } from './pages/public/Home/Homepage';
 import { NewPassword } from './pages/public/auth/NewPassword/NewPassword';
 import { ResetPassword } from './pages/public/auth/ResetPassword/ResetPassword';
 
