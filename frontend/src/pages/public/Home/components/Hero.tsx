@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router';
 
 import { uiRoutes } from '../../../../uiRoutes';
 
-import Globe from '../assets/Globe.svg';
+import Globe from '../assets/globe.svg';
 import { Button } from '../../../../components/Button/Button';
 
 export function Hero() {
@@ -11,9 +11,11 @@ export function Hero() {
   return (
     <div className="flex flex-col pt-24 pr-20 pb-19 pl-20 items-center gap-9 self-stretch">
       <div className="flex w-265.5 flex-col gap-5">
-        <h1 className="text-dark-primary text-center text-[64px] font-medium leading-[120%]">
+        <h1 className="text-dark-primary text-center text-[64px] font-medium leading-[120%] selection:text-white selection:bg-black">
           Where Efficiency Meets Customer Satisfaction. It's Called{' '}
-          <span className="text-light-primary bg-dark-primary">CRM</span>
+          <span className="text-light-primary bg-dark-primary selection:text-black! selection:bg-white!">
+            CRM
+          </span>
         </h1>
 
         <span className="text-dark-secondary text-center text-xl font-medium self-stretch">
