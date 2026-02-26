@@ -14,7 +14,7 @@ export function TrustedCompanies() {
         </h2>
 
         <span className="text-dark-secondary text-center text-lg font-normal leading-normal">
-          20+ Businesses and Companies uses Converge for theirs CRM Platform
+          20+ Businesses and Companies uses Venture for their CRM Platform
         </span>
       </div>
 
