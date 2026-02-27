@@ -5,6 +5,7 @@ import { TrustedCompanies } from './components/TrustedCompanies/TrustedCompanies
 import { WhyChooseVenture } from './components/WhyChooseVenture/WhyChooseVenture';
 import { AppIntegrations } from './components/IntegrationsSection/AppIntegrations';
 import { CrmDesignedForYou } from './components/DesignedForYouSection/CrmDesignedForYou';
+import { NextLevelSection } from './components/NextLevelSection/NextLevelSection';
 
 export function Homepage() {
   return (
@@ -16,6 +17,7 @@ export function Homepage() {
       <WhyChooseVenture />
       <AppIntegrations />
       <ReviewSection />
+      <NextLevelSection />
     </>
   );
 }
