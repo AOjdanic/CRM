@@ -1,12 +1,12 @@
-import { SectionTitle } from './SectionTitle';
-import { CrmFeatureBox } from './CrmFeatureBox';
+import { SectionTitle } from '../SectionTitle';
+import { CrmFeatureBox } from './components/CrmFeatureBox';
 
-import crmDashboard from '../assets/crmDashboard.png';
+import crmDashboard from './assets/crmDashboard.png';
 
-import Robot from '../assets/robot.svg';
-import Clipboard from '../assets/clipboard.svg';
-import Presentation from '../assets/presentation.svg';
-import Collaborators from '../assets/collaborators.svg';
+import Robot from './assets/robot.svg';
+import Clipboard from './assets/clipboard.svg';
+import Presentation from './assets/presentation.svg';
+import Collaborators from './assets/collaborators.svg';
 
 export function CrmDesignedForYou() {
   return (

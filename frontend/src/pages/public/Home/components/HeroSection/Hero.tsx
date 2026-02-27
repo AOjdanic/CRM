@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router';
 
-import { uiRoutes } from '../../../../uiRoutes';
+import { uiRoutes } from '../../../../../uiRoutes';
 
-import Globe from '../assets/globe.svg';
-import { Button } from '../../../../components/Button/Button';
+import Globe from './assets/globe.svg';
+import { Button } from '../../../../../components/Button/Button';
 
 export function Hero() {
   const navigate = useNavigate();

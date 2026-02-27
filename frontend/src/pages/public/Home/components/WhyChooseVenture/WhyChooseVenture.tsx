@@ -1,9 +1,11 @@
-import { ChooseVentureParagraph } from './ChooseVentureParagraph';
-import { SectionTitle } from './SectionTitle';
-import chooseVentureContacts from '../assets/chooseVentureContacts.png';
-import chooseVentureInsights from '../assets/chooseVentureInsights.png';
-import chooseVentureDashboard from '../assets/chooseVentureDashboard.png';
-import chooseVentureAnalytics from '../assets/chooseVentureAnalytics.png';
+import { SectionTitle } from '../SectionTitle';
+
+import chooseVentureContacts from './assets/chooseVentureContacts.png';
+import chooseVentureInsights from './assets/chooseVentureInsights.png';
+import chooseVentureDashboard from './assets/chooseVentureDashboard.png';
+import chooseVentureAnalytics from './assets/chooseVentureAnalytics.png';
+
+import { ChooseVentureParagraph } from './components/ChooseVentureParagraph';
 
 export function WhyChooseVenture() {
   return (

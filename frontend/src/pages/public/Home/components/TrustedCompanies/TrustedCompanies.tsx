@@ -1,10 +1,10 @@
-import ZoomLogo from '../assets/zoomLogo.svg';
-import SlackLogo from '../assets/slackLogo.svg';
-import GoogleLogo from '../assets/googleLogo.svg';
-import SquareLogo from '../assets/squareLogo.svg';
-import DropboxLogo from '../assets/dropboxLogo.svg';
-import CoinbaseLogo from '../assets/coinbaseLogo.svg';
-import { SectionTitle } from './SectionTitle';
+import ZoomLogo from './assets/zoomLogo.svg';
+import SlackLogo from './assets/slackLogo.svg';
+import GoogleLogo from './assets/googleLogo.svg';
+import SquareLogo from './assets/squareLogo.svg';
+import DropboxLogo from './assets/dropboxLogo.svg';
+import CoinbaseLogo from './assets/coinbaseLogo.svg';
+import { SectionTitle } from '../SectionTitle';
 
 export function TrustedCompanies() {
   return (

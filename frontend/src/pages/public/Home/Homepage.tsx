@@ -1,15 +1,15 @@
-import { Hero } from './components/Hero';
-import { AppImage } from './components/AppImage';
-import { TrustedCompanies } from './components/TrustedCompanies'; 
-import { WhyChooseVenture } from './components/WhyChooseVenture';
-import { CrmDesignedForYou } from './components/CrmDesignedForYou';
+import { Hero } from './components/HeroSection/Hero';
 import { ReviewSection } from './components/ReviewSection/ReviewSection';
+import { CrmImageSection } from './components/CrmImageSection/CrmImageSection';
+import { TrustedCompanies } from './components/TrustedCompanies/TrustedCompanies';
+import { WhyChooseVenture } from './components/WhyChooseVenture/WhyChooseVenture';
+import { CrmDesignedForYou } from './components/DesignedForYouSection/CrmDesignedForYou';
 
 export function Homepage() {
   return (
     <>
       <Hero />
-      <AppImage />
+      <CrmImageSection />
       <TrustedCompanies />
       <CrmDesignedForYou />
       <WhyChooseVenture />
