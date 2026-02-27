@@ -25,6 +25,7 @@ services:
         - action: sync+restart
           path: ./backend/src
           target: /app/src
+          initial_sync: true
 
         - action: rebuild
           path: ./backend/build.gradle
@@ -42,6 +43,7 @@ services:
         - action: sync
           path: ./frontend/src/
           target: /app/src/
+          initial_sync: true
 
         - action: rebuild
           path: ./frontend/
