@@ -8,7 +8,7 @@ import { SectionTitle } from './SectionTitle';
 
 export function TrustedCompanies() {
   return (
-    <div className="flex py-19 flex-col justify-center items-center gap-12 self-stretch bg-background-primary">
+    <section className="flex py-19 flex-col justify-center items-center gap-12 self-stretch bg-background-primary">
       <SectionTitle
         title="Trusted by Many Established Companies"
         subtitle="20+ Businesses and Companies uses Venture for their CRM Platform"
@@ -24,6 +24,6 @@ export function TrustedCompanies() {
           <ZoomLogo />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

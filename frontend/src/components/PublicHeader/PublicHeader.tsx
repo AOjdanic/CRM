@@ -4,7 +4,7 @@ import { LogInOrRegister } from './components/LogInOrRegister';
 
 export function PublicHeader() {
   return (
-    <header className="flex justify-between items-center self-stretch py-6 px-20">
+    <header className="flex justify-between items-center self-stretch py-6 px-20 max-w-360 mx-auto w-full">
       <Logo />
 
       <Navigation />

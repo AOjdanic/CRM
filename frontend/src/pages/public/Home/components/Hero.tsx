@@ -9,7 +9,7 @@ export function Hero() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col pt-24 pr-20 pb-19 pl-20 items-center gap-9 self-stretch">
+    <section className="flex flex-col pt-24 pr-20 pb-19 pl-20 items-center gap-9 self-stretch">
       <div className="flex w-265.5 flex-col gap-5">
         <h1 className="text-dark-primary text-center text-[64px] font-medium leading-[120%] selection:text-white selection:bg-black">
           Where Efficiency Meets Customer Satisfaction. It's Called{' '}
@@ -52,6 +52,6 @@ export function Hero() {
           <Globe />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

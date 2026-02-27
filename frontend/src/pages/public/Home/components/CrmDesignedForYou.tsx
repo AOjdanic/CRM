@@ -10,7 +10,7 @@ import Collaborators from '../assets/collaborators.svg';
 
 export function CrmDesignedForYou() {
   return (
-    <div className="flex flex-col items-center justify-center gap-12 bg-background-primary py-24 px-20">
+    <section className="flex flex-col items-center justify-center gap-12 bg-background-primary py-24 px-20">
       <SectionTitle
         title="A CRM Designed with You in Mind"
         subtitle="Customize everything to make Venture adapt to your business, not the other way around."
@@ -47,6 +47,6 @@ export function CrmDesignedForYou() {
           <img className="w-full" src={crmDashboard} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
