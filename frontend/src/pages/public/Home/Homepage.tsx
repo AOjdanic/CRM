@@ -3,6 +3,7 @@ import { ReviewSection } from './components/ReviewSection/ReviewSection';
 import { CrmImageSection } from './components/CrmImageSection/CrmImageSection';
 import { TrustedCompanies } from './components/TrustedCompanies/TrustedCompanies';
 import { WhyChooseVenture } from './components/WhyChooseVenture/WhyChooseVenture';
+import { AppIntegrations } from './components/IntegrationsSection/AppIntegrations';
 import { CrmDesignedForYou } from './components/DesignedForYouSection/CrmDesignedForYou';
 
 export function Homepage() {
@@ -13,6 +14,7 @@ export function Homepage() {
       <TrustedCompanies />
       <CrmDesignedForYou />
       <WhyChooseVenture />
+      <AppIntegrations />
       <ReviewSection />
     </>
   );
