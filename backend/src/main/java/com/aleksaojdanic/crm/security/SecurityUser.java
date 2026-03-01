@@ -19,6 +19,10 @@ public class SecurityUser implements UserDetails {
         return this.user.getEmail();
     }
 
+    public Long getId() {
+        return this.user.getId();
+    }
+
     @Override
     public String getPassword() {
         return this.user.getPassword();
