@@ -21,7 +21,7 @@ public class TodoController {
     }
 
     @PostMapping()
-    public void createTodo(@RequestBody TodoDto todo) {
-        todoService.createTodo(todo.getName(), todo.getContent());
+    public void createTodo(@RequestBody TodoDto todoDto) {
+        todoService.createTodo(todoDto);
     }
 }
