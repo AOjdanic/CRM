@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { useLogin } from './hooks/useLogIn';
+
 import { Input } from '../../../../components/Input/Input';
 import { Button } from '../../../../components/Button/Button';
 
@@ -18,6 +20,10 @@ import { AlreadyHaveAnAccount } from './components/AlreadyHaveAnAccount';
 
 export function LogIn() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [password, setPassword] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+
+  const { login } = useLogin();
 
   return (
     <main className="flex flex-col h-screen flex-1 w-full">
@@ -36,11 +42,21 @@ export function LogIn() {
             <div className="flex flex-col items-start gap-6 w-full">
               <div className="flex flex-col gap-4 items-start w-full">
                 <Input
+                  value={email}
                   label="Email Address"
                   placeholder="Enter your email here"
+                  onInput={(e) => {
+                    const value = (e.target as HTMLInputElement).value;
+                    setEmail(value);
+                  }}
                 />
 
                 <Input
+                  value={password}
+                  onInput={(e) => {
+                    const value = (e.target as HTMLInputElement).value;
+                    setPassword(value);
+                  }}
                   type={showPassword ? 'text' : 'password'}
                   label="Password"
                   placeholder="Enter your password here"
@@ -67,7 +83,12 @@ export function LogIn() {
               </div>
 
               <div className="flex flex-col items-center gap-4 w-full">
-                <Button className="w-full" variant="primary" size="large">
+                <Button
+                  onClick={() => login({ email, password })}
+                  className="w-full"
+                  variant="primary"
+                  size="large"
+                >
                   Log In
                 </Button>
 

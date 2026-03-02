@@ -15,12 +15,20 @@ import { TitleSection } from '../components/TitleSection';
 import { Checkbox } from '../../../../components/Checkbox/Checkbox';
 import { AllRightsReserved } from '../components/AllRightsReserved';
 import { AlreadyHaveAnAccount } from './components/AlreadyHaveAnAccount';
+import { useSignUp } from './hooks/useSignUp';
 
 export function SignUp() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [showConfirm, setShowConfirm] = useState<boolean>(false);
 
   const [checked, setChecked] = useState<RadixCheckbox.CheckedState>(false);
+
+  const { signup } = useSignUp();
+  const payload = { firstName, lastName, email, password };
 
   return (
     <main className="flex flex-col h-screen flex-1 w-full">
@@ -39,18 +47,44 @@ export function SignUp() {
             <div className="flex flex-col items-start gap-6 w-full">
               <div className="flex flex-col gap-4 items-start w-full">
                 <div className="flex items-start gap-4 self-stretch">
-                  <Input label="First Name" placeholder="First Name" />
+                  <Input
+                    value={firstName}
+                    onInput={(e) => {
+                      const value = (e.target as HTMLInputElement).value;
+                      setFirstName(value);
+                    }}
+                    label="First Name"
+                    placeholder="First Name"
+                  />
 
-                  <Input label="Last Name" placeholder="Last Name" />
+                  <Input
+                    value={lastName}
+                    onInput={(e) => {
+                      const value = (e.target as HTMLInputElement).value;
+                      setLastName(value);
+                    }}
+                    label="Last Name"
+                    placeholder="Last Name"
+                  />
                 </div>
 
                 <Input
+                  value={email}
                   label="Email Address"
                   placeholder="Enter your email here"
+                  onInput={(e) => {
+                    const value = (e.target as HTMLInputElement).value;
+                    setEmail(value);
+                  }}
                 />
 
                 <div className="flex items-start gap-4 self-stretch">
                   <Input
+                    value={password}
+                    onInput={(e) => {
+                      const value = (e.target as HTMLInputElement).value;
+                      setPassword(value);
+                    }}
                     type={showPassword ? 'text' : 'password'}
                     label="Password"
                     placeholder="Password"
@@ -106,7 +140,12 @@ export function SignUp() {
               </div>
 
               <div className="flex flex-col items-center gap-4 w-full">
-                <Button className="w-full" variant="primary" size="large">
+                <Button
+                  onClick={() => signup(payload)}
+                  className="w-full"
+                  variant="primary"
+                  size="large"
+                >
                   Sign Up
                 </Button>
 
