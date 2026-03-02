@@ -10,5 +10,7 @@ export const uiRoutes = {
     newPassword: '/new-password',
     resetPassword: '/reset-password',
   },
-  auth: {},
+  auth: {
+    dashboard: '/dashboard',
+  },
 } as const;

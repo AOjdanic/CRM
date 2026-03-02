@@ -12,6 +12,8 @@ import { Features } from './pages/public/Features/Features';
 import { Homepage } from './pages/public/Home/Homepage';
 import { NewPassword } from './pages/public/auth/NewPassword/NewPassword';
 import { ResetPassword } from './pages/public/auth/ResetPassword/ResetPassword';
+import { AuthLayout } from './pages/auth/AuthLayout';
+import { Dashboard } from './pages/auth/Dashboard/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,12 @@ const router = createBrowserRouter([
   },
   { path: uiRoutes.public.login, Component: LogIn },
   { path: uiRoutes.public.signup, Component: SignUp },
+
+  {
+    path: uiRoutes.auth.dashboard,
+    Component: AuthLayout,
+    children: [{ index: true, Component: Dashboard }],
+  },
 ]);
 
 export function AppRouter() {
