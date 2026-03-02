@@ -28,7 +28,7 @@ public class AuthController {
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
 
-    @PostMapping("/register")
+    @PostMapping("/signup")
     public ResponseEntity<?> register(@RequestBody UserRegistrationDto userRegistrationDto) {
         if (userRegistrationDto.email().isBlank() ||
                 userRegistrationDto.password().isBlank() ||
