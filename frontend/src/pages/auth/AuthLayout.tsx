@@ -9,7 +9,6 @@ export function AuthLayout() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log('auth effect');
     if (!auth.user) {
       navigate(uiRoutes.public.login);
     }
