@@ -7,6 +7,7 @@ import com.aleksaojdanic.crm.models.User;
 import com.aleksaojdanic.crm.repositories.UserRepository;
 import com.aleksaojdanic.crm.security.JwtService;
 import com.aleksaojdanic.crm.security.SecurityUser;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -29,7 +30,7 @@ public class AuthController {
     private final JwtService jwtService;
 
     @PostMapping("/signup")
-    public ResponseEntity<?> register(@RequestBody UserRegistrationDto userRegistrationDto) {
+    public ResponseEntity<?> register(@Valid @RequestBody UserRegistrationDto userRegistrationDto) {
         if (userRegistrationDto.email().isBlank() ||
                 userRegistrationDto.password().isBlank() ||
                 userRegistrationDto.firstName().isBlank() ||
@@ -60,7 +61,7 @@ public class AuthController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody UserLoginDto userLoginDto) {
+    public ResponseEntity<?> login(@Valid @RequestBody UserLoginDto userLoginDto) {
         if (userLoginDto.email().isBlank() || userLoginDto.password().isBlank()) {
             return ResponseEntity.badRequest().body("Invalid user login details");
         }

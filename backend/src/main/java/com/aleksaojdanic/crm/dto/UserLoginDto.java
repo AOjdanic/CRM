@@ -1,4 +1,12 @@
 package com.aleksaojdanic.crm.dto;
 
-public record UserLoginDto(String email, String password) {
+import jakarta.validation.constraints.NotBlank;
+
+public record UserLoginDto(
+        @NotBlank(message = "Email field is required")
+        String email,
+
+        @NotBlank(message = "Password field is required")
+        String password
+) {
 }
