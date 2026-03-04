@@ -3,17 +3,18 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import { uiRoutes } from './uiRoutes';
 
 import { Blog } from './pages/public/Blog/Blog';
-import { LogIn } from './pages/public/auth/LogIn/LogIn';
 import { About } from './pages/public/About/About';
-import { SignUp } from './pages/public/auth/SignUp/SignUp';
+import { LogIn } from './pages/public/auth/LogIn/LogIn';
+import { Homepage } from './pages/public/Home/Homepage';
 import { Pricing } from './pages/public/Pricing/Pricing';
+import { SignUp } from './pages/public/auth/SignUp/SignUp';
 import { PublicLayout } from './pages/public/PublicLayout';
 import { Features } from './pages/public/Features/Features';
-import { Homepage } from './pages/public/Home/Homepage';
 import { NewPassword } from './pages/public/auth/NewPassword/NewPassword';
 import { ResetPassword } from './pages/public/auth/ResetPassword/ResetPassword';
-import { AuthLayout } from './pages/auth/AuthLayout';
+
 import { Dashboard } from './pages/auth/Dashboard/Dashboard';
+import { AuthLayout } from './pages/auth/AuthLayout/AuthLayout';
 
 const router = createBrowserRouter([
   {
