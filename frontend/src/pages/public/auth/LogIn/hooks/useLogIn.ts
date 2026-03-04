@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router';
+import { useMutation } from '@tanstack/react-query';
 
 import APIService from '../../../../../api';
 
@@ -11,20 +12,29 @@ type LoginPayload = {
   password: string;
 };
 
+const LOGIN_KEY = 'login-key';
+
+async function login(payload: LoginPayload) {
+  const res = await APIService.post(apiRoutes.auth.login, payload);
+
+  return res.data;
+}
+
 export function useLogin() {
   const auth = useAuth();
   const navigate = useNavigate();
 
-  async function login(payload: LoginPayload) {
-    const res = await APIService.post(apiRoutes.auth.login, payload);
+  return useMutation({
+    mutationKey: [LOGIN_KEY],
+    mutationFn: login,
+    onSuccess(data) {
+      const { token } = data;
 
-    const token = res.data.token;
+      if (token) {
+        auth.login(token);
 
-    if (token) {
-      auth.login(token);
-      navigate(uiRoutes.auth.dashboard);
-    }
-  }
-
-  return { login };
+        navigate(uiRoutes.auth.dashboard);
+      }
+    },
+  });
 }

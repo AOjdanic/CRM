@@ -1,10 +1,13 @@
 import { AppRouter } from './AppRouter';
 import { AuthenticationProvider } from './providers/AuthenticationProvider';
+import { ReactQueryProvider } from './providers/ReactQuery/ReactQueryProvider';
 
 export function App() {
   return (
-    <AuthenticationProvider>
-      <AppRouter />
-    </AuthenticationProvider>
+    <ReactQueryProvider>
+      <AuthenticationProvider>
+        <AppRouter />
+      </AuthenticationProvider>
+    </ReactQueryProvider>
   );
 }

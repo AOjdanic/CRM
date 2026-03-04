@@ -27,7 +27,7 @@ export function SignUp() {
 
   const [checked, setChecked] = useState<RadixCheckbox.CheckedState>(false);
 
-  const { signup } = useSignUp();
+  const { mutate: signup } = useSignUp();
   const payload = { firstName, lastName, email, password };
 
   return (

@@ -23,7 +23,7 @@ export function LogIn() {
   const [password, setPassword] = useState<string>('');
   const [email, setEmail] = useState<string>('');
 
-  const { login } = useLogin();
+  const { mutate: login } = useLogin();
 
   return (
     <main className="flex flex-col h-screen flex-1 w-full">
