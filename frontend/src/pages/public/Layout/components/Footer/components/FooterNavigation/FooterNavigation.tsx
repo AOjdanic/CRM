@@ -1,6 +1,7 @@
-import { uiRoutes } from '../../../../uiRoutes';
-import { NavigationCategory } from './components/NavigationCategory';
+import { uiRoutes } from '../../../../../../../uiRoutes';
+
 import { NavigationItem } from './components/NavigationItem';
+import { NavigationCategory } from './components/NavigationCategory';
 
 export function FooterNavigation() {
   return (

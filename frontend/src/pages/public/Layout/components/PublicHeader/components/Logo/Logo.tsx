@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 import { LogoImage } from './LogoImage';
-import { uiRoutes } from '../../../../uiRoutes';
+import { uiRoutes } from '../../../../../../../uiRoutes';
 
 type Props = {
   disableNavigation?: boolean;

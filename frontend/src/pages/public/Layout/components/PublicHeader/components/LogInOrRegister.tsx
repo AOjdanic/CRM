@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
-import { Button } from '../../Button/Button';
-import { uiRoutes } from '../../../uiRoutes';
+import { uiRoutes } from '../../../../../../uiRoutes';
+import { Button } from '../../../../../../components/Button/Button';
 
 export function LogInOrRegister() {
   const navigate = useNavigate();

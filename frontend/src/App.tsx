@@ -1,5 +1,5 @@
 import { AppRouter } from './AppRouter';
-import { AuthenticationProvider } from './providers/AuthenticationProvider';
+import { AuthenticationProvider } from './providers/Auth/AuthenticationProvider';
 import { ReactQueryProvider } from './providers/ReactQuery/ReactQueryProvider';
 
 export function App() {

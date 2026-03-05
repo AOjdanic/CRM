@@ -4,7 +4,7 @@ import { Checkbox as RadixCheckbox } from 'radix-ui';
 import { Input } from '../../../../components/Input/Input';
 import { Button } from '../../../../components/Button/Button';
 
-import { Logo } from '../../../../components/PublicHeader/components/Logo/Logo';
+import { Logo } from '../../Layout/components/PublicHeader/components/Logo/Logo';
 
 import Eye from '../assets/eye.svg';
 import ClosedEye from '../assets/closedEye.svg';
@@ -37,7 +37,7 @@ export function SignUp() {
 
         <div className="flex py-16 px-35 flex-col items-center gap-35 flex-1">
           <div className="flex flex-col items-center justify-center gap-9 self-stretch">
-            <Logo disableNavigation />
+            <Logo />
 
             <TitleSection
               title="Create Your Account"
