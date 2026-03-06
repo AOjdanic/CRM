@@ -15,6 +15,7 @@ import { ResetPassword } from './pages/public/auth/ResetPassword/ResetPassword';
 
 import { Dashboard } from './pages/auth/Dashboard/Dashboard';
 import { AuthLayout } from './pages/auth/AuthLayout/AuthLayout';
+import { Notes } from './pages/auth/Notes/Notes';
 
 const router = createBrowserRouter([
   {
@@ -34,9 +35,12 @@ const router = createBrowserRouter([
   { path: uiRoutes.public.signup, Component: SignUp },
 
   {
-    path: uiRoutes.auth.dashboard,
+    path: uiRoutes.auth.index,
     Component: AuthLayout,
-    children: [{ index: true, Component: Dashboard }],
+    children: [
+      { path: uiRoutes.auth.dashboard, Component: Dashboard },
+      { path: uiRoutes.auth.notes, Component: Notes },
+    ],
   },
 ]);
 

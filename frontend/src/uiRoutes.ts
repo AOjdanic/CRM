@@ -11,6 +11,17 @@ export const uiRoutes = {
     resetPassword: '/reset-password',
   },
   auth: {
-    dashboard: '/dashboard',
+    index: '/auth',
+    dashboard: '/auth/dashboard',
+    notifications: '/auth/notifications',
+    notes: '/auth/notes',
+    tasks: '/auth/tasks',
+    emails: '/auth/emails',
+    calendars: '/auth/calendars',
+    analytics: '/auth/analytics',
+    contacts: '/auth/contacts',
+    companies: '/auth/companies',
+    integrations: '/auth/integrations',
+    settings: '/auth/settings',
   },
 } as const;

@@ -6,6 +6,7 @@ import { useAuth } from '../../../hooks/useAuth';
 import { SiteSearch } from './components/SiteSearch/SiteSearch';
 import { HelpCenter } from './components/HelpCenter/HelpCenter';
 import { ProfileDropdown } from './components/ProfileDropdown/ProfileDropdown';
+import { Sidebar } from './components/Sidebar/Sidebar';
 
 export function AuthLayout() {
   const auth = useAuth();
@@ -20,7 +21,9 @@ export function AuthLayout() {
   return (
     <div className="flex flex-col flex-1">
       <div className="flex h-full">
-        <section className="flex flex-1 max-w-62.5">sidebar</section>
+        <section className="flex flex-1 max-w-62.5">
+          <Sidebar />
+        </section>
 
         <section className="flex flex-col w-full flex-1">
           <header className="flex h-18 px-8 justify-between items-center border-b border-solid border-b-border-primary bg-white">
