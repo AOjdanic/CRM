@@ -10,16 +10,16 @@ export function DoubleCaret() {
       <path
         d="M6.25 6.25L2.5 10L6.25 13.75"
         stroke="#AFAFAF"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M13.75 6.25L17.5 10L13.75 13.75"
         stroke="#AFAFAF"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
