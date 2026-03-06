@@ -21,9 +21,7 @@ export function AuthLayout() {
   return (
     <div className="flex flex-col flex-1">
       <div className="flex h-full">
-        <section className="flex flex-1 max-w-62.5">
-          <Sidebar />
-        </section>
+        <Sidebar />
 
         <section className="flex flex-col w-full flex-1">
           <header className="flex h-18 px-8 justify-between items-center border-b border-solid border-b-border-primary bg-white">

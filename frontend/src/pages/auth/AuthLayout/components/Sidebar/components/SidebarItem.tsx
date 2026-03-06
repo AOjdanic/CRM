@@ -5,9 +5,10 @@ type Props = {
   to: string;
   icon: ReactNode;
   title: string;
+  hideTitle: boolean;
 };
 
-export function SidebarItem({ to, icon, title }: Props) {
+export function SidebarItem({ to, icon, title, hideTitle }: Props) {
   return (
     <NavLink
       to={to}
@@ -15,7 +16,9 @@ export function SidebarItem({ to, icon, title }: Props) {
     >
       <div className="flex items-center gap-3 grow shrink-0 basis-0">
         {icon}
-        <span className="text-sm font-medium leading-normal">{title}</span>
+        {hideTitle ? null : (
+          <span className="text-sm font-medium leading-normal">{title}</span>
+        )}
       </div>
     </NavLink>
   );
