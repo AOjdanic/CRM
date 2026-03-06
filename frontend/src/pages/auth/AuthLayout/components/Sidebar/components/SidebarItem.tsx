@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { NavLink } from 'react-router';
+import { twMerge } from 'tailwind-merge';
 
 type Props = {
   to: string;
@@ -12,7 +13,12 @@ export function SidebarItem({ to, icon, title, hideTitle }: Props) {
   return (
     <NavLink
       to={to}
-      className="flex h-9 p-2 justify-between items-center self-stretch gap-3 rounded-sm text-dark-secondary hover:bg-action-secondary-hover [&.active]:bg-action-secondary-selected [&.active]:text-dark-primary"
+      className={({ isActive }) =>
+        twMerge(
+          'flex h-9 p-2 justify-between items-center self-stretch gap-3 rounded-sm text-dark-secondary hover:bg-action-secondary-hover',
+          isActive ? 'bg-action-secondary-selected text-dark-primary' : ''
+        )
+      }
     >
       <div className="flex items-center gap-3 grow shrink-0 basis-0">
         {icon}
