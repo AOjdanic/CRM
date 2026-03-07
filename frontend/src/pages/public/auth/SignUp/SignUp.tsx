@@ -44,7 +44,13 @@ export function SignUp() {
               subtitle="Please Create an Account to Continue"
             />
 
-            <div className="flex flex-col items-start gap-6 w-full">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                signup(payload);
+              }}
+              className="flex flex-col items-start gap-6 w-full"
+            >
               <div className="flex flex-col gap-4 items-start w-full">
                 <div className="flex items-start gap-4 self-stretch">
                   <Input
@@ -158,7 +164,7 @@ export function SignUp() {
 
                 <AlreadyHaveAnAccount />
               </div>
-            </div>
+            </form>
           </div>
           <AllRightsReserved />
         </div>

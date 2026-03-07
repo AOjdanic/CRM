@@ -23,6 +23,7 @@ import { Dashboard } from './pages/auth/Dashboard/Dashboard';
 import { Companies } from './pages/auth/Companies/Companies';
 import { Analytics } from './pages/auth/Analytics/Analytics';
 import { AuthLayout } from './pages/auth/AuthLayout/AuthLayout';
+import { HelpCenter } from './pages/auth/HelpCenter/HelpCenter';
 import { Integrations } from './pages/auth/Integrations/Integrations';
 import { Notifications } from './pages/auth/Notifications/Notifications';
 
@@ -58,7 +59,8 @@ const router = createBrowserRouter([
       { path: uiRoutes.auth.companies, Component: Companies },
       { path: uiRoutes.auth.integrations, Component: Integrations },
       { path: uiRoutes.auth.settings, Component: Settings },
-      ],
+      { path: uiRoutes.auth.helpCenter, Component: HelpCenter },
+    ],
   },
 ]);
 

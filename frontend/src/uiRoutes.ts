@@ -23,5 +23,6 @@ export const uiRoutes = {
     companies: '/auth/companies',
     integrations: '/auth/integrations',
     settings: '/auth/settings',
+    helpCenter: '/auth/help-center',
   },
 } as const;
