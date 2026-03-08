@@ -1,12 +1,14 @@
-import { Input } from '../../../../../components/Input/Input';
-import MagnifyingGlass from './assets/magnifyingGlass.svg';
+import { MagnifyingGlassIcon } from '@phosphor-icons/react';
+
 import { CommandF } from './components/CommandF';
+
+import { Input } from '../../../../../components/Input/Input';
 
 export function SiteSearch() {
   return (
     <Input
       placeholder="Search"
-      prefixContent={<MagnifyingGlass />}
+      prefixContent={<MagnifyingGlassIcon size={20} weight="bold" />}
       suffixContent={<CommandF />}
     />
   );

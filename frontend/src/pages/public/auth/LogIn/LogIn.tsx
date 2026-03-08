@@ -5,10 +5,10 @@ import { useLogin } from './hooks/useLogIn';
 import { Input } from '../../../../components/Input/Input';
 import { Button } from '../../../../components/Button/Button';
 
-import Eye from '../assets/eye.svg';
-import ClosedEye from '../assets/closedEye.svg';
 import loginImage from '../assets/loginImage.png';
 import GoogleLogo from '../assets/googleLogo.svg';
+
+import { EyeClosedIcon, EyeIcon } from '@phosphor-icons/react';
 
 import { RememberMe } from './components/RememberMe';
 import { TitleSection } from '../components/TitleSection';
@@ -68,12 +68,12 @@ export default function LogIn() {
                   placeholder="Enter your password here"
                   suffixContent={
                     showPassword ? (
-                      <ClosedEye
+                      <EyeClosedIcon
                         className="h-5 w-5 cursor-pointer"
                         onClick={() => setShowPassword(false)}
                       />
                     ) : (
-                      <Eye
+                      <EyeIcon
                         className="h-5 w-5 cursor-pointer"
                         onClick={() => setShowPassword(true)}
                       />

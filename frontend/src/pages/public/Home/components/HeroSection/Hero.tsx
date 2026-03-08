@@ -2,8 +2,10 @@ import { useNavigate } from 'react-router';
 
 import { uiRoutes } from '../../../../../uiRoutes';
 
-import Globe from './assets/globe.svg';
+
 import { Button } from '../../../../../components/Button/Button';
+
+import { GlobeIcon } from '@phosphor-icons/react';
 
 export function Hero() {
   const navigate = useNavigate();
@@ -49,7 +51,7 @@ export function Hero() {
             </strong>
           </span>
 
-          <Globe />
+          <GlobeIcon />
         </div>
       </div>
     </section>

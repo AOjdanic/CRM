@@ -6,10 +6,10 @@ import { Button } from '../../../../components/Button/Button';
 
 import { Logo } from '../../Layout/components/PublicHeader/components/Logo/Logo';
 
-import Eye from '../assets/eye.svg';
-import ClosedEye from '../assets/closedEye.svg';
 import signupImage from '../assets/signupImage.png';
 import GoogleLogo from '../assets/googleLogo.svg';
+
+import { EyeClosedIcon, EyeIcon } from '@phosphor-icons/react';
 
 import { TitleSection } from '../components/TitleSection';
 import { Checkbox } from '../../../../components/Checkbox/Checkbox';
@@ -96,12 +96,12 @@ export default function SignUp() {
                     placeholder="Password"
                     suffixContent={
                       showPassword ? (
-                        <ClosedEye
+                        <EyeClosedIcon
                           className="h-5 w-5 cursor-pointer"
                           onClick={() => setShowPassword(false)}
                         />
                       ) : (
-                        <Eye
+                        <EyeIcon
                           className="h-5 w-5 cursor-pointer"
                           onClick={() => setShowPassword(true)}
                         />
@@ -115,12 +115,12 @@ export default function SignUp() {
                     placeholder="Confirm Password"
                     suffixContent={
                       showConfirm ? (
-                        <ClosedEye
+                        <EyeClosedIcon
                           className="h-5 w-5 cursor-pointer"
                           onClick={() => setShowConfirm(false)}
                         />
                       ) : (
-                        <Eye
+                        <EyeIcon
                           className="h-5 w-5 cursor-pointer"
                           onClick={() => setShowConfirm(true)}
                         />

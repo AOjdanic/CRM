@@ -4,18 +4,21 @@ import { uiRoutes } from '../../../../../uiRoutes';
 import { SidebarItem } from './components/SidebarItem';
 import { Logo } from '../../../../public/Layout/components/PublicHeader/components/Logo/Logo';
 
-import { Gear } from './components/icons/Gear';
-import { Bell } from './components/icons/Bell';
-import { ChartPie } from './components/icons/ChartPie';
-import { Envelope } from './components/icons/Envelope';
-import { Calendar } from './components/icons/Calendar';
-import { NoteBlank } from './components/icons/NoteBlank';
-import { Briefcase } from './components/icons/Briefcase';
-import { SquaresFour } from './components/icons/SquareFour';
 import { DoubleCaret } from './components/icons/DoubleCaret';
-import { ChartLineUp } from './components/icons/ChartLineUp';
-import { AddressBook } from './components/icons/AddressBook';
-import { ClipboardText } from './components/icons/ClipboardText';
+
+import {
+  ChartPieIcon,
+  GearIcon,
+  BellIcon,
+  EnvelopeIcon,
+  CalendarIcon,
+  NoteBlankIcon,
+  BriefcaseIcon,
+  SquaresFourIcon,
+  ChartLineUpIcon,
+  AddressBookIcon,
+  ClipboardTextIcon,
+} from '@phosphor-icons/react';
 
 export function Sidebar() {
   const [expanded, setExpanded] = useState(true);
@@ -43,37 +46,37 @@ export function Sidebar() {
               hideTitle={!expanded}
               to={uiRoutes.auth.dashboard}
               title="Dashboard"
-              icon={<ChartPie />}
+              icon={<ChartPieIcon />}
             />
             <SidebarItem
               hideTitle={!expanded}
               to={uiRoutes.auth.notifications}
               title="Notifications"
-              icon={<Bell />}
+              icon={<BellIcon />}
             />
             <SidebarItem
               hideTitle={!expanded}
               to={uiRoutes.auth.notes}
               title="Notes"
-              icon={<NoteBlank />}
+              icon={<NoteBlankIcon />}
             />
             <SidebarItem
               hideTitle={!expanded}
               to={uiRoutes.auth.tasks}
               title="Tasks"
-              icon={<ClipboardText />}
+              icon={<ClipboardTextIcon />}
             />
             <SidebarItem
               hideTitle={!expanded}
               to={uiRoutes.auth.emails}
               title="Emails"
-              icon={<Envelope />}
+              icon={<EnvelopeIcon />}
             />
             <SidebarItem
               hideTitle={!expanded}
               to={uiRoutes.auth.calendars}
               title="Calendars"
-              icon={<Calendar />}
+              icon={<CalendarIcon />}
             />
           </div>
 
@@ -88,19 +91,19 @@ export function Sidebar() {
               hideTitle={!expanded}
               to={uiRoutes.auth.analytics}
               title="Analytics"
-              icon={<ChartLineUp />}
+              icon={<ChartLineUpIcon />}
             />
             <SidebarItem
               hideTitle={!expanded}
               to={uiRoutes.auth.contacts}
               title="Contacts"
-              icon={<AddressBook />}
+              icon={<AddressBookIcon />}
             />
             <SidebarItem
               hideTitle={!expanded}
               to={uiRoutes.auth.companies}
               title="Companies"
-              icon={<Briefcase />}
+              icon={<BriefcaseIcon />}
             />
           </div>
 
@@ -109,14 +112,14 @@ export function Sidebar() {
               hideTitle={!expanded}
               to={uiRoutes.auth.integrations}
               title="Integrations"
-              icon={<SquaresFour />}
+              icon={<SquaresFourIcon />}
             />
 
             <SidebarItem
               hideTitle={!expanded}
               to={uiRoutes.auth.settings}
               title="Settings"
-              icon={<Gear />}
+              icon={<GearIcon />}
             />
           </div>
         </div>
