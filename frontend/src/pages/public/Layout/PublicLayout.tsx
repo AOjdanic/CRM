@@ -8,7 +8,7 @@ import { PublicHeader } from './components/PublicHeader/PublicHeader';
 export default function PublicLayout() {
   const location = useLocation();
 
-  const isOnPasswordsPage =
+  const isOnPasswordPages =
     location.pathname === uiRoutes.public.resetPassword ||
     location.pathname === uiRoutes.public.newPassword;
 
@@ -18,7 +18,7 @@ export default function PublicLayout() {
       <main className="flex flex-col w-full flex-1 max-w-360 mx-auto">
         <Outlet />
       </main>
-      {isOnPasswordsPage ? null : <Footer />}
+      {isOnPasswordPages ? null : <Footer />}
     </>
   );
 }
