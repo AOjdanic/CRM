@@ -47,6 +47,7 @@ export default function LogIn() {
             >
               <div className="flex flex-col gap-4 items-start w-full">
                 <Input
+                  type="email"
                   value={email}
                   label="Email Address"
                   placeholder="Enter your email here"
