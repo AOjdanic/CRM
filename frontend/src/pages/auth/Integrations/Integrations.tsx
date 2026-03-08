@@ -1,3 +1,3 @@
-export function Integrations() {
+export default function Integrations() {
   return <div>Integrations</div>;
 }

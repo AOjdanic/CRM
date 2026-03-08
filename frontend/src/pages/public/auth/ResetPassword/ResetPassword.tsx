@@ -8,7 +8,7 @@ import { Button } from '../../../../components/Button/Button';
 import { TitleSection } from '../components/TitleSection';
 import { AllRightsReserved } from '../components/AllRightsReserved';
 
-export function ResetPassword() {
+export default function ResetPassword() {
   return (
     <div className="flex pt-30 pb-20 flex-col items-start gap-10 self-stretch bg-light-secondary flex-1">
       <div className="flex px-35 flex-col justify-center items-center gap-35 self-stretch">

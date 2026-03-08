@@ -5,7 +5,7 @@ import { uiRoutes } from '../../../uiRoutes';
 import { Footer } from './components/Footer/Footer';
 import { PublicHeader } from './components/PublicHeader/PublicHeader';
 
-export function PublicLayout() {
+export default function PublicLayout() {
   const location = useLocation();
 
   const isOnPasswordsPage =

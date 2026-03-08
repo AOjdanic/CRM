@@ -1,31 +1,40 @@
+import { lazy } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 
 import { uiRoutes } from './uiRoutes';
 
-import { Blog } from './pages/public/Blog/Blog';
-import { About } from './pages/public/About/About';
-import { LogIn } from './pages/public/auth/LogIn/LogIn';
-import { Homepage } from './pages/public/Home/Homepage';
-import { Pricing } from './pages/public/Pricing/Pricing';
-import { SignUp } from './pages/public/auth/SignUp/SignUp';
-import { Features } from './pages/public/Features/Features';
-import { PublicLayout } from './pages/public/Layout/PublicLayout';
-import { NewPassword } from './pages/public/auth/NewPassword/NewPassword';
-import { ResetPassword } from './pages/public/auth/ResetPassword/ResetPassword';
+const Blog = lazy(() => import('./pages/public/Blog/Blog'));
+const About = lazy(() => import('./pages/public/About/About'));
+const LogIn = lazy(() => import('./pages/public/auth/LogIn/LogIn'));
+const Homepage = lazy(() => import('./pages/public/Home/Homepage'));
+const Pricing = lazy(() => import('./pages/public/Pricing/Pricing'));
+const SignUp = lazy(() => import('./pages/public/auth/SignUp/SignUp'));
+const Features = lazy(() => import('./pages/public/Features/Features'));
+const PublicLayout = lazy(() => import('./pages/public/Layout/PublicLayout'));
+const NewPassword = lazy(
+  () => import('./pages/public/auth/NewPassword/NewPassword'),
+);
+const ResetPassword = lazy(
+  () => import('./pages/public/auth/ResetPassword/ResetPassword'),
+);
 
-import { Notes } from './pages/auth/Notes/Notes';
-import { Tasks } from './pages/auth/Tasks/Tasks';
-import { Emails } from './pages/auth/Emails/Emails';
-import { Contacts } from './pages/auth/Contacts/Contacts';
-import { Settings } from './pages/auth/Settings/Settings';
-import { Calendars } from './pages/auth/Calendars/Calendars';
-import { Dashboard } from './pages/auth/Dashboard/Dashboard';
-import { Companies } from './pages/auth/Companies/Companies';
-import { Analytics } from './pages/auth/Analytics/Analytics';
-import { AuthLayout } from './pages/auth/AuthLayout/AuthLayout';
-import { HelpCenter } from './pages/auth/HelpCenter/HelpCenter';
-import { Integrations } from './pages/auth/Integrations/Integrations';
-import { Notifications } from './pages/auth/Notifications/Notifications';
+const Notes = lazy(() => import('./pages/auth/Notes/Notes'));
+const Tasks = lazy(() => import('./pages/auth/Tasks/Tasks'));
+const Emails = lazy(() => import('./pages/auth/Emails/Emails'));
+const Contacts = lazy(() => import('./pages/auth/Contacts/Contacts'));
+const Settings = lazy(() => import('./pages/auth/Settings/Settings'));
+const Calendars = lazy(() => import('./pages/auth/Calendars/Calendars'));
+const Dashboard = lazy(() => import('./pages/auth/Dashboard/Dashboard'));
+const Companies = lazy(() => import('./pages/auth/Companies/Companies'));
+const Analytics = lazy(() => import('./pages/auth/Analytics/Analytics'));
+const AuthLayout = lazy(() => import('./pages/auth/AuthLayout/AuthLayout'));
+const HelpCenter = lazy(() => import('./pages/auth/HelpCenter/HelpCenter'));
+const Integrations = lazy(
+  () => import('./pages/auth/Integrations/Integrations'),
+);
+const Notifications = lazy(
+  () => import('./pages/auth/Notifications/Notifications'),
+);
 
 const router = createBrowserRouter([
   {

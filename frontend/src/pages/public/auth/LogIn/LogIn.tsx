@@ -17,7 +17,7 @@ import { AllRightsReserved } from '../components/AllRightsReserved';
 import { AlreadyHaveAnAccount } from './components/AlreadyHaveAnAccount';
 import { Logo } from '../../Layout/components/PublicHeader/components/Logo/Logo';
 
-export function LogIn() {
+export default function LogIn() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [password, setPassword] = useState<string>('');
   const [email, setEmail] = useState<string>('');

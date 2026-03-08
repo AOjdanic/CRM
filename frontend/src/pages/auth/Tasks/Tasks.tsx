@@ -1,3 +1,3 @@
-export function Tasks() {
+export default function Tasks() {
   return <div>Tasks</div>;
 }

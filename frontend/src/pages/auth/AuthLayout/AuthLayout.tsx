@@ -8,7 +8,7 @@ import { HelpCenter } from './components/HelpCenter/HelpCenter';
 import { ProfileDropdown } from './components/ProfileDropdown/ProfileDropdown';
 import { Sidebar } from './components/Sidebar/Sidebar';
 
-export function AuthLayout() {
+export default function AuthLayout() {
   const auth = useAuth();
   const navigate = useNavigate();
 

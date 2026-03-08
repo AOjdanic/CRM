@@ -7,7 +7,7 @@ import { AppIntegrations } from './components/IntegrationsSection/AppIntegration
 import { CrmDesignedForYou } from './components/DesignedForYouSection/CrmDesignedForYou';
 import { NextLevelSection } from './components/NextLevelSection/NextLevelSection';
 
-export function Homepage() {
+export default function Homepage() {
   return (
     <>
       <Hero />

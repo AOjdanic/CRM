@@ -17,7 +17,7 @@ import { AllRightsReserved } from '../components/AllRightsReserved';
 import { AlreadyHaveAnAccount } from './components/AlreadyHaveAnAccount';
 import { useSignUp } from './hooks/useSignUp';
 
-export function SignUp() {
+export default function SignUp() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
